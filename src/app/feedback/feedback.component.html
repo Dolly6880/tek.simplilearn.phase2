@@ -1,0 +1,100 @@
+<style>
+    body, html {
+      height: 100%;
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+    
+    * {
+      box-sizing: border-box;
+    }
+    
+    .bg-image {
+      /* The image used */
+      background-image: url("assets/img/myback.jpeg");
+      
+      /* Add the blur effect */
+      filter: blur(8px);
+      -webkit-filter: blur(8px);
+      
+      /* Full height */
+      height: 100%; 
+      
+      /* Center and scale the image nicely */
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+    
+    /* Position text in the middle of the page/image */
+    .bg-text {
+      background-color: rgb(0,0,0); /* Fallback color */
+      background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
+      color: white;
+      font-weight: bold;
+      border: 3px solid #f1f1f1;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 2;
+      width: 80%;
+      padding: 20px;
+      text-align: center;
+    }
+    
+    </style>
+    
+    <body>
+    
+    <div class="bg-image"></div>
+    
+    <div class="bg-text">
+        <div fxLayoutAlign="center center" fxFlexFill class="main-div" >
+            
+            <mat-list >
+                <mat-list-item style="color: white;">Send us the feedback</mat-list-item>
+                <mat-divider></mat-divider>
+                <mat-list-item style="color: white;">What's your name?</mat-list-item>
+               
+                <mat-list-item style="color: white;"><form class="example-form">
+                    <mat-form-field class="example-full-width">
+                     
+                      <input matInput placeholder="Ex. Dolly" value="">
+                    </mat-form-field>
+                  
+                    
+                  </form></mat-list-item>
+                <mat-list-item style="color: white;">Please select your rating category below!!!</mat-list-item>
+                <mat-slider
+              thumbLabel
+              [displayWith]="formatLabel"
+              tickInterval="1000"
+              min="1"
+              max="5" style="width: 400px;margin-left: 30px;"></mat-slider>
+              <mat-list-item style="color: white;">Please Add your feedback category below!!!</mat-list-item>
+              <mat-form-field class="example-chip-list">
+                
+                <mat-chip-list #chipList aria-label="Fruit selection">
+                  <mat-chip *ngFor="let fruit of fruits" [selectable]="selectable"
+                           [removable]="removable" (removed)="remove(fruit)">
+                    {{fruit.name}}
+                    <mat-icon matChipRemove *ngIf="removable">cancel</mat-icon>
+                  </mat-chip>
+                  <input placeholder="New Feedback..."
+                         [matChipInputFor]="chipList"
+                         [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
+                         [matChipInputAddOnBlur]="addOnBlur"
+                         (matChipInputTokenEnd)="add($event)">
+                </mat-chip-list>
+            </mat-form-field>
+            <mat-list-item style="color: white;"><button style="color: darkolivegreen;margin-left: 150px;width: 100px;" (click)="get()">Submit</button></mat-list-item>
+              </mat-list>
+              
+              </div>
+            
+    </div>
+    
+</body>
+
+

@@ -1,0 +1,20 @@
+.example-card {
+    max-width: 400px;
+    
+  }
+  
+  
+  .myinfo
+  {
+      margin-bottom: 400px;
+  }
+
+  .example-spacer {
+    flex: 1 1 auto;
+  }
+
+  .abc{
+    background-image: url(/assets/img/quiz-background-with-flat-objects_23-2147593080.jpg);
+    background-position: cover;
+    
+}

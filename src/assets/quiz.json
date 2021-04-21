@@ -1,0 +1,62 @@
+[{
+    "question":"Were you told your TSH and T4 levels were checked and that these levels are in the normal range?",
+    "answer":
+    [
+       { "option":"yes","correct":false,"thyroid":false},
+       { "option":"no","correct":true,"thyroid":true}
+       
+    ]
+
+},
+{
+    "question":"Have you been experiencing any of these symptoms: fatigue, dramatic or unexplained weight changes, dry skin, brittle hair, muscle aches, or sensitivity to cold temperatures?",
+    "answer":
+    [
+       { "option":"yes","correct":true,"thyroid":false},
+       { "option":"no","correct":false,"thyroid":false}
+       
+    ]
+
+},
+{
+    "question":"Have you been experiencing these symptoms (eg, fatigue, weight changes, dry skin, brittle hair, muscle and joint pain) for an extended period of time?",
+    "answer":
+    [
+       { "option":"yes","correct":true,"thyroid":false},
+       { "option":"no","correct":false,"thyroid":false}
+       
+    ]
+
+},
+{
+    "question":"Is there a history of thyroid disease or hypothyroidism in your family?",
+    "answer":
+    [
+       { "option":"yes","correct":true,"thyroid":false},
+       { "option":"no","correct":false,"thyroid":false}
+       
+    ]
+
+},
+{
+    "question":"Do you have an autoimmune disorder such as type 1 diabetes or rheumatoid arthritis?",
+    "answer":
+    [
+       { "option":"yes","correct":true,"thyroid":false},
+       { "option":"no","correct":false,"thyroid":false}
+       
+    ]
+
+},
+{
+    "question":"Are you taking anti-thyroid medication or have you had thyroid surgery?",
+    "answer":
+    [
+       { "option":"yes","correct":true,"thyroid":false},
+       { "option":"no","correct":false,"thyroid":false}
+       
+    ]
+
+}
+]
+ 

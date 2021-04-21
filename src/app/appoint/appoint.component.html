@@ -1,0 +1,77 @@
+<style>
+    body, html {
+      height: 100%;
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+    
+    * {
+      box-sizing: border-box;
+    }
+    
+    .bg-image {
+      /* The image used */
+      background-image: url("assets/img/myback.jpeg");
+      
+      /* Add the blur effect */
+      filter: blur(8px);
+      -webkit-filter: blur(8px);
+      
+      /* Full height */
+      height: 100%; 
+      
+      /* Center and scale the image nicely */
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+    
+    /* Position text in the middle of the page/image */
+    .bg-text {
+      background-color: rgb(0,0,0); /* Fallback color */
+      background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
+      color: white;
+      font-weight: bold;
+      border: 3px solid #f1f1f1;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 2;
+      width: 80%;
+      padding: 20px;
+      text-align: center;
+    }
+    </style>
+    
+    <body>
+    
+    <div class="bg-image"></div>
+    
+    <div class="bg-text">
+        
+            <h1 >Appointment Form</h1>
+            
+            <div style="margin-top:48px">
+              
+              <form  >
+                <p><input  type="text" placeholder="Name" required name="Name"></p>
+                <p><input  type="text" placeholder="Email" required name="Email"></p>
+                <p><input  type="text" placeholder="Subject" required name="Subject"></p>
+                <p><input  type="text" placeholder="Doctor" required name="Which doctor"></p>
+                <p><input  type="text" placeholder="Message" required name="Message"></p>
+                <p>
+                  <button  type="submit" (click)="openDialog()">
+                     Request Appointment
+                  </button>
+                </p>
+              </form>
+
+              
+            </div>
+          </div>
+    
+    
+</body>
+
+

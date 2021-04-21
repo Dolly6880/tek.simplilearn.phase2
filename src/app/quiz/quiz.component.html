@@ -1,0 +1,109 @@
+
+<style>
+    body, html {
+      height: 100%;
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+    
+    * {
+      box-sizing: border-box;
+    }
+    
+    .bg-image {
+      /* The image used */
+      background-image: url("assets/img/myback.jpeg");
+      
+      /* Add the blur effect */
+      filter: blur(8px);
+      -webkit-filter: blur(8px);
+      
+      /* Full height */
+      height: 100%; 
+      
+      /* Center and scale the image nicely */
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+    
+    /* Position text in the middle of the page/image */
+    .bg-text {
+      background-color: rgb(0,0,0); /* Fallback color */
+      background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
+      color: white;
+      font-weight: bold;
+      border: 3px solid #f1f1f1;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 2;
+      width: 80%;
+      padding: 20px;
+      text-align: center;
+    }
+    </style>
+    
+    <body>
+    
+    <div class="bg-image"></div>
+    
+    
+     
+      <div class="bg-text">
+        <div *ngIf="x<6 " >
+            {{quizzes[x].question}}
+            <div *ngFor= "let quiz of quizzes[x].answer" >
+              
+                <button (click)="get(quiz.correct,x,quiz.thyroid)" class="ab">{{quiz.option}}</button>
+                
+            </div>
+        </div>
+        <div *ngIf="x>5 && score==5 ">
+                <p>Research: Moderate Risk For Thyroid Disease</p>
+                  <p>Your results reveal that you are at Moderate risk for a thyroid disease. For this you are advised to have a thyroid reset and to reach out to a physician for further testing and confirmation.</p>
+                  
+                  
+                  
+                 <p> If you are confirmed to have a thyroid disease, assemble a team familiar with thyroid diseases to help you address it.</p>
+                  
+                  
+                  
+                  <p>Find out how healthy your immune system and adrenal glands are, check for any waste buildup in your body and set an exact target for your blood level. </p>
+                  
+                   
+                  
+                
+                <button class="abc" (click)="consult()"> Consult to doctor</button>
+                <button class="abc" (click)="back()"> Close</button>
+        </div>
+        <div *ngIf="x>5 && score>7 ">
+          <p>Research: High Risk For Thyroid Disease</p>
+          <p>Your results reveal that you are at high risk for a thyroid disease. For this you are advised to have a thyroid reset and to reach out to a physician for further testing and confirmation.</p>
+          
+          
+          
+         <p> If you are confirmed to have a thyroid disease, assemble a team familiar with thyroid diseases to help you address it.</p>
+          
+          
+          
+          <p>Find out how healthy your immune system and adrenal glands are, check for any waste buildup in your body and set an exact target for your blood level. </p>
+          
+           
+          
+         
+          <button class="abc" (click)="consult()"> Consult to doctor</button>
+          <button class="abc" (click)="back()"> Close</button>
+  </div>
+        <div *ngIf="x>5 && score<5 ">
+            <span><img src="assets/img/congo1.gif"></span>
+            <p><h1>YOU ARE OUT OF DANGER</h1>
+            <button class="abc" (click)="back()"> Close</button>
+        </div>
+        
+    </div>
+      
+    
+    
+</body>
